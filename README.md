@@ -13,7 +13,7 @@
 [![Tests for sprint 14](https://github.com/${имя_пользователя}/${имя репозитория}/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/${имя_пользователя}/${имя репозитория}/actions/workflows/tests-14-sprint.yml)
 ```
 ## About
-В рамках 13ПР частично написан backend проекта Mesto. Использованы express, MongoDB, обработка ошибок.
+В рамках 14ПР доработан backend проекта Mesto (добавлены регистрация и авторизация). Использованы express, MongoDB, централизованная обработка ошибок.
 
 ## Директории
 
