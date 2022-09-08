@@ -23,8 +23,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 const options = {
   origin: [
     'http://localhost:3006',
-    // 'https://ВАШ ДОМЕЙН С ДОКУМЕНТА',
-    // 'https://YOUR.github.io test for git',
+    'http://mestos.students.nomoredomains.sbs',
+    'https://mestos.students.nomoredomains.sbs',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
