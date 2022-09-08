@@ -24,7 +24,7 @@ const options = {
   origin: [
     'http://localhost:3006',
     // 'https://ВАШ ДОМЕЙН С ДОКУМЕНТА',
-    // 'https://YOUR.github.io',
+    // 'https://YOUR.github.io test for git',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
