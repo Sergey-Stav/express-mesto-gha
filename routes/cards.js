@@ -24,14 +24,14 @@ router.delete('/cards/:cardId', celebrate({
 }), deleteCard);
 
 // поставить лайк карточке
-router.put('/cards/likes/:cardId', celebrate({
+router.put('/cards/:cardId/likes', celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().hex().length(24),
   }),
 }), likeCard);
 
 // убрать лайк с карточки
-router.delete('/cards/likes/:cardId', celebrate({
+router.delete('/cards/:cardId/likes', celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().hex().length(24),
   }),
