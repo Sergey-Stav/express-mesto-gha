@@ -27,6 +27,8 @@ const options = {
     'http://localhost:3006',
     'http://mestos.students.nomoredomains.sbs',
     'https://mestos.students.nomoredomains.sbs',
+    'http://51.250.18.119',
+    'https://51.250.18.119',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
