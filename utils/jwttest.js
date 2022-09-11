@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const jwt = require('jsonwebtoken');
 
 const YOUR_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzFiOThkNzA3N2I1MDI5ZGQ1MDA1OWUiLCJpYXQiOjE2NjI5MTA3OTksImV4cCI6MTY2MzUxNTU5OX0.eNIclpLI7R-Kcmetoo1eGHhJx18k9YhWZdxvcovNFe8'; // вставьте сюда JWT, который вернул публичный сервер
