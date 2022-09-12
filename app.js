@@ -8,7 +8,7 @@ const cors = require('cors');
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
 const NotFound = require('./errors/notFoundError');
-const ErrorDefault = require('./errors/state');
+const errorProcessing = require('./errors/errorProcessing');
 
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
@@ -80,13 +80,6 @@ app.use(errorLogger); // подключаем логгер ошибок
 
 app.use(errors());
 
-app.use((err, req, res, next) => {
-  if (err.status) {
-    res.status(err.status).send({ message: err.message });
-  } else {
-    res.status(ErrorDefault).send({ message: 'Internal Server Error' });
-  }
-  next();
-});
+app.use(errorProcessing);
 
 app.listen(PORT);
