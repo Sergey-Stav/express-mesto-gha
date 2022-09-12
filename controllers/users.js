@@ -52,9 +52,6 @@ const createUser = (req, res, next) => {
   const {
     name, about, avatar, email, password,
   } = req.body;
-  if (!email || !password) {
-    throw new BadRequestError('Email или пароль не могут быть пустыми');
-  }
   return bcrypt
     .hash(password, 10)
     .then((hash) => User.create({
@@ -86,9 +83,6 @@ const login = (req, res, next) => {
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      if (!user || !password) {
-        return next(new BadRequestError('Неправильные почта или пароль'));
-      }
       const token = getJwtToken(user.id);
       return res.send({ token });
     })

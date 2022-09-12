@@ -69,14 +69,14 @@ app.post('/signin', celebrate({
 
 app.use(auth);
 
-app.use('/', userRouter);
-app.use('/', cardRouter);
-
-app.use(errorLogger); // подключаем логгер ошибок
+app.use('/users', userRouter);
+app.use('/cards', cardRouter);
 
 app.use('*', (req, res, next) => {
   next(new NotFound('Страница не найдена'));
 });
+
+app.use(errorLogger); // подключаем логгер ошибок
 
 app.use(errors());
 
